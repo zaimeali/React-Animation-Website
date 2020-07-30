@@ -3,6 +3,9 @@ import './App.css';
 import Navbar from './components/Navbar';
 import NavItems from './components/NavItems';
 
+// Icon
+import { ReactComponent as Caret } from './img/icons/caret.svg';
+
 function App() {
   return (
     <div>
@@ -10,6 +13,10 @@ function App() {
         <NavItems icon="🏏" />
         <NavItems icon="🏏" />
         <NavItems icon="🏏" />
+
+        <NavItems icon={ <Caret /> }>
+
+        </NavItems>
       </Navbar>
     </div>
   );
