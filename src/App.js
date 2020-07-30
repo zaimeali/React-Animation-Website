@@ -7,7 +7,9 @@ function App() {
   return (
     <div>
       <Navbar>
-        <NavItems icon="x" />
+        <NavItems icon="🏏" />
+        <NavItems icon="🏏" />
+        <NavItems icon="🏏" />
       </Navbar>
     </div>
   );
