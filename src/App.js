@@ -7,6 +7,7 @@ import NavItems from './components/NavItems';
 import DropDownMenu from './components/DropDownMenu';
 import Section from './components/Section';
 import BannerContent from './components/BannerContent'
+import TopBtn from './inc/topBtn';
 
 // Icon
 import { ReactComponent as Caret } from './img/icons/caret.svg';
@@ -14,7 +15,7 @@ import { ReactComponent as ProgrammerConcept } from './img/icons/programmer-conc
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Navbar>
         <NavItems icon="🏏" />
         <NavItems icon="🏏" />
@@ -40,6 +41,8 @@ function App() {
         sectionClass="section" 
         bgColor="#dfd" 
       />
+
+      <TopBtn />
 
     </div>
   );
