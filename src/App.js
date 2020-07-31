@@ -12,7 +12,6 @@ import BannerContent from './components/BannerContent'
 import { ReactComponent as Caret } from './img/icons/caret.svg';
 import { ReactComponent as ProgrammerConcept } from './img/icons/programmer-concept.svg';
 
-
 function App() {
   return (
     <div>
