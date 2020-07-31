@@ -24,9 +24,9 @@ export default function DropDownMenu() {
 
     function DropdownItem(props) {
         return (
-          <a href="#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+          <a href="/#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
             <span className="icon-button">{props.leftIcon}</span>
-                { props.children }
+                <span className="menu-item-text">{ props.children }</span>
             <span className="icon-right">{props.rightIcon}</span>
           </a>
         );
@@ -42,9 +42,9 @@ export default function DropDownMenu() {
                 onEnter={ calcHeight }
             >
                 <div className="menu">
-                    <DropdownItem rightIcon="🍪" leftIcon="🏖️">My Profile</DropdownItem>
-                    <DropdownItem leftIcon="🍪" goToMenu="settings">Settings</DropdownItem>
-                    <DropdownItem leftIcon="🦁" goToMenu="animals">Animals</DropdownItem>
+                    <DropdownItem className="second-dropdown" rightIcon="🍪" leftIcon="🏖️">My Profile</DropdownItem>
+                    <DropdownItem className="second-dropdown" leftIcon="🍪" goToMenu="settings">Settings</DropdownItem>
+                    <DropdownItem className="second-dropdown" leftIcon="🦁" goToMenu="animals">Animals</DropdownItem>
                 </div>
             </CSSTransition>
 
@@ -62,7 +62,7 @@ export default function DropDownMenu() {
                     >
                         <h2>My Tutorial</h2>
                     </DropdownItem>
-                    <DropdownItem leftIcon="🍪" goToMenu="main">nice</DropdownItem>
+                    <DropdownItem className="second-dropdown" leftIcon="🍪" goToMenu="main">nice</DropdownItem>
                 </div>
             </CSSTransition>
 
@@ -80,12 +80,12 @@ export default function DropDownMenu() {
                     >
                         <h2>Animals</h2>
                     </DropdownItem>
-                    <DropdownItem leftIcon="🐅" goToMenu="main">Tiger</DropdownItem>
-                    <DropdownItem leftIcon="🐆" goToMenu="main">Leopard</DropdownItem>
-                    <DropdownItem leftIcon="🦘" goToMenu="main">Kangaroo</DropdownItem>
-                    <DropdownItem leftIcon="🐘" goToMenu="main">Elephant</DropdownItem>
-                    <DropdownItem leftIcon="🦅" goToMenu="main">Eagle</DropdownItem>
-                    <DropdownItem leftIcon="🦍" goToMenu="main">Gorilla</DropdownItem>
+                    <DropdownItem className="second-dropdown" leftIcon="🐅" goToMenu="main">Tiger</DropdownItem>
+                    <DropdownItem className="second-dropdown" leftIcon="🐆" goToMenu="main">Leopard</DropdownItem>
+                    <DropdownItem className="second-dropdown" leftIcon="🦘" goToMenu="main">Kangaroo</DropdownItem>
+                    <DropdownItem className="second-dropdown" leftIcon="🐘" goToMenu="main">Elephant</DropdownItem>
+                    <DropdownItem className="second-dropdown" leftIcon="🦅" goToMenu="main">Eagle</DropdownItem>
+                    <DropdownItem className="second-dropdown" leftIcon="🦍" goToMenu="main">Gorilla</DropdownItem>
                 </div>
             </CSSTransition>
         </div>
