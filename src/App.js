@@ -13,7 +13,7 @@ import Footer from './inc/Footer';
 // Icon
 import { ReactComponent as Caret } from './img/icons/caret.svg';
 import { ReactComponent as ProgrammerConcept } from './img/icons/programmer-concept.svg';
-import { ReactComponent as Github } from './img/icons/github.svg';
+import { ReactComponent as GithubLogo } from './img/icons/github.svg';
 import { ReactComponent as Linkedin } from './img/icons/linkedin.svg';
 import { ReactComponent as Twitter } from './img/icons/twitter.svg';
 
@@ -36,7 +36,7 @@ function App() {
         />
 
         <NavItems 
-          icon={ <Github /> }
+          icon={ <GithubLogo /> }
           bgColor="#c0c0c0"
           linkSection="https://github.com/zaimeali"
           target={ true }
@@ -80,7 +80,6 @@ function App() {
       />
 
       <TopBtn />
-
 
       <Footer />
     </div>

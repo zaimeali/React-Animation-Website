@@ -1,4 +1,4 @@
-import React, { useState, createRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 // React Transition
 import { CSSTransition } from 'react-transition-group'
@@ -11,7 +11,7 @@ export default function DropDownMenu() {
 
     const [activeMenu, setActiveMenu] = useState('main');
     const [menuHeight, setMenuHeight] = useState(null);
-    const dropdownRef = createRef(null);
+    const dropdownRef = useRef(null);
 
     useEffect(() => {
         setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
@@ -42,14 +42,14 @@ export default function DropDownMenu() {
                 onEnter={ calcHeight }
             >
                 <div className="menu">
-                    <DropdownItem className="second-dropdown" rightIcon="🍪" leftIcon="🏖️">My Profile</DropdownItem>
-                    <DropdownItem className="second-dropdown" leftIcon="🍪" goToMenu="settings">Settings</DropdownItem>
-                    <DropdownItem className="second-dropdown" leftIcon="🦁" goToMenu="animals">Animals</DropdownItem>
+                    <DropdownItem className="second-dropdown" leftIcon="👨🏽‍🎓" goToMenu="Certification">Certifications</DropdownItem>
+                    <DropdownItem className="second-dropdown" leftIcon="🎒" goToMenu="Projects">Recent Projects</DropdownItem>
+                    <DropdownItem className="second-dropdown" rightIcon="📧" leftIcon="📬">Contact Me</DropdownItem>
                 </div>
             </CSSTransition>
 
             <CSSTransition
-                in={ activeMenu === 'settings' }
+                in={ activeMenu === 'Certification' }
                 unmountOnExit
                 timeout={ 500 }
                 classNames="menu-secondary"
@@ -60,25 +60,7 @@ export default function DropDownMenu() {
                         goToMenu="main"
                         leftIcon={ <Arrow /> }
                     >
-                        <h2>My Tutorial</h2>
-                    </DropdownItem>
-                    <DropdownItem className="second-dropdown" leftIcon="🍪" goToMenu="main">nice</DropdownItem>
-                </div>
-            </CSSTransition>
-
-            <CSSTransition
-                in={ activeMenu === 'animals' }
-                unmountOnExit
-                timeout={ 500 }
-                classNames="menu-secondary"
-                onEnter={calcHeight}
-            >
-                <div className="menu">
-                    <DropdownItem 
-                        goToMenu="main"
-                        leftIcon={ <Arrow /> }
-                    >
-                        <h2>Animals</h2>
+                        <h2>Certifications</h2>
                     </DropdownItem>
                     <DropdownItem className="second-dropdown" leftIcon="🐅" goToMenu="main">Tiger</DropdownItem>
                     <DropdownItem className="second-dropdown" leftIcon="🐆" goToMenu="main">Leopard</DropdownItem>
@@ -86,6 +68,24 @@ export default function DropDownMenu() {
                     <DropdownItem className="second-dropdown" leftIcon="🐘" goToMenu="main">Elephant</DropdownItem>
                     <DropdownItem className="second-dropdown" leftIcon="🦅" goToMenu="main">Eagle</DropdownItem>
                     <DropdownItem className="second-dropdown" leftIcon="🦍" goToMenu="main">Gorilla</DropdownItem>
+                </div>
+            </CSSTransition>
+
+            <CSSTransition
+                in={ activeMenu === 'Projects' }
+                unmountOnExit
+                timeout={ 500 }
+                classNames="menu-secondary"
+                onEnter={calcHeight}
+            >
+                <div className="menu">
+                    <DropdownItem 
+                        goToMenu="main"
+                        leftIcon={ <Arrow /> }
+                    >
+                        <h2>Recent Projects</h2>
+                    </DropdownItem>
+                    <DropdownItem className="second-dropdown" leftIcon="🍪">nice</DropdownItem>
                 </div>
             </CSSTransition>
         </div>
