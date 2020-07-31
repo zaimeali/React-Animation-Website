@@ -9,6 +9,9 @@ import DropDownMenu from './components/DropDownMenu';
 // Icon
 import { ReactComponent as Caret } from './img/icons/caret.svg';
 
+// React Transition
+// import { CSSTransition } from 'react-transition-group';
+
 function App() {
   return (
     <div>
