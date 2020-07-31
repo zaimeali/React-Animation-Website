@@ -5,6 +5,7 @@ export default function Section(props) {
         <div 
             className={ props.sectionClass } 
             style={{ backgroundColor: props.bgColor }}
+            id={ props.SectionId }
         >
             { props.bannerContent ? (
                 <span className="bannerContent">

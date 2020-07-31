@@ -152,10 +152,23 @@ ul{
 }
 
 .nav-item{
-  width: calc(var(--nav-size) * 0.8);
+  /* width: calc(var(--nav-size) * 0.8); */
   display: flex;
   justify-content: center;
   align-items: center;
+  
+  margin-left: 5px;
+}
+
+.icon-text-button{
+  padding: 7px;
+  border-radius: 5px;
+  font-weight: 600;
+  background-color: var(--bg-accent);
+}
+
+.icon-text-button:hover{
+  filter: brightness(1.2);
 }
 
 a{

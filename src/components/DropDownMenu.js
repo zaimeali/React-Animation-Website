@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, createRef, useEffect } from 'react'
 
 // React Transition
 import { CSSTransition } from 'react-transition-group'
@@ -11,11 +11,11 @@ export default function DropDownMenu() {
 
     const [activeMenu, setActiveMenu] = useState('main');
     const [menuHeight, setMenuHeight] = useState(null);
-    const dropdownRef = useRef(null);
+    const dropdownRef = createRef(null);
 
     useEffect(() => {
         setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
-    }, [])
+    }, [dropdownRef])
 
     function calcHeight(el){
         const height = el.offsetHeight;
