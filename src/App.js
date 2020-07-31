@@ -12,6 +12,7 @@ import TopBtn from './inc/topBtn';
 // Icon
 import { ReactComponent as Caret } from './img/icons/caret.svg';
 import { ReactComponent as ProgrammerConcept } from './img/icons/programmer-concept.svg';
+import Footer from './inc/Footer';
 
 function App() {
   return (
@@ -38,12 +39,14 @@ function App() {
       />
 
       <Section 
-        sectionClass="section" 
+        sectionClass="section-84" 
         bgColor="#dfd" 
       />
 
       <TopBtn />
 
+
+      <Footer />
     </div>
   );
 }
