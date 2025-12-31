@@ -9,7 +9,7 @@
     "framer-motion": "^2.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "react-snap-scroll": "0.0.5",
     "react-transition-group": "^4.4.1",
     "scroll-snap": "^3.0.2"
